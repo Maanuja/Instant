@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "efreiinstant": {
+      "hosting": {
+        "Instant": [
+          "efreiinstant"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "efreiinstant"
+  }
+}
