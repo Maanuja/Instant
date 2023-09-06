@@ -1,0 +1,45 @@
+<section>
+  <h2>Liste des galeries</h2>
+  <ul class="container-event">
+    <li *ngFor="let event of events" class="event">
+      <a routerLink="/event/{{ event.id }}" class="link">
+        <img src="{{ event.image }}" alt="{{ event.name }}" />
+        <div class="title">
+          <p>{{ event.name }}</p>
+        </div>
+        <div class="btn">&#10140;</div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <div class="container">
+    <form (ngSubmit)="onSubmit()">
+      <h2>Ajouter une galerie</h2>
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="formData.name"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="url">URL :</label>
+        <input
+          type="text"
+          id="url"
+          name="url"
+          class="form-control"
+          [(ngModel)]="formData.url"
+          required
+        />
+      </div>
+      <button type="submit" class="btn">Ajouter</button>
+    </form>
+  </div>
+</section>
