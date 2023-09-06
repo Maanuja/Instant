@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from './shared.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Instant';
+
+  ngOninit(){}
+
+
+  constructor(private service:SharedService){}
+
+  images:any = [];
+
+  // refreshImage(){
+  //   this.service.getImages().subscribe((response) =>{
+  //     this.images=response;
+  //   });
+  // }
+
+  // ngOninit(){
+  //   this.refreshImage();
+  // }
 }
